@@ -41,7 +41,7 @@ function checkLogin() {
     let userInfo = localStorage.getItem('user');
     let welcome = document.getElementById('welcome-msg')
     if(userInfo){
-        welcome.textContent = `Welcome, ${JSON.parse(userInfo).username}`
+        welcome.textContent = `Welcome, ${JSON.parse(userInfo).email }`
         Array.from(navUser).forEach(user => user.style.display = "block")
         Array.from(navGuest).forEach(guest => guest.style.display = "none")
     }

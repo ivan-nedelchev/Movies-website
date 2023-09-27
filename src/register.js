@@ -1,4 +1,4 @@
-
+import { loadHome } from "./home.js";
 let registerSection = document.getElementById('form-sign-up');
 let form = registerSection.querySelector('form');
 let url = `http://localhost:3030/users/register`;
@@ -21,7 +21,10 @@ async function registerUser(event) {
                 password: formData.get("password")
             })
         })
-        console.log(response);
+        alert('SUCCESS')
+        loadHome()
+    } else {
+        alert('passwords do not match!')
     }
 }
 
